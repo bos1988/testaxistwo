@@ -1,8 +1,4 @@
-/*div
-{
-	border: 1px solid black;
-}*/
-body input
+﻿body input
 {
 	width: 1em;
 	border: 2px solid #999;
@@ -45,7 +41,6 @@ body input
 {
 	width: 876px;
 	height: 184px;
-	/*border: 1px solid #000;*/
 	background: url(sprite.png);
 	background-position: bottom;
 	background-repeat: no-repeat;

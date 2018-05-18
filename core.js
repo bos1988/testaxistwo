@@ -1,4 +1,4 @@
-function var_dump(obj)
+п»їfunction var_dump(obj)
 {
 	var s = '<h1>' + obj + '</h1>';
 	s += '<ol>';
@@ -23,27 +23,27 @@ function maxIndex(array)
 }
 
 //
-// ’очка входа.
+// РўРѕС‡РєР° РІС…РѕРґР°.
 //
 
 $(document).ready(
 	function()
 	{
-		//скрываем стрелки
+		//СЃРєСЂС‹РІР°РµРј СЃС‚СЂРµР»РєРё
 		$(".arrow").hide();
 		
-		// задаем случайное уравнение в соответствии с условиЯми
+		// Р·Р°РґР°РµРј СЃР»СѓС‡Р°Р№РЅРѕРµ СѓСЂР°РІРЅРµРЅРёРµ РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ СѓСЃР»РѕРІРёСЏРјРё
 		var a = 6 + Math.round(Math.random() * 3);
 		var c = 11 + Math.round(Math.random() * 3);
 		var b = c - a;
 		
-		//настройки Canvas
+		//РЅР°СЃС‚СЂРѕР№РєРё Canvas
 		var lineW = 2.5;
 		var canvas1 = document.getElementById('canvas1');
 		var canvas2 = document.getElementById('canvas2');
 		var ctx1 = canvas1.getContext('2d');
 		var ctx2 = canvas2.getContext('2d');
-		//размеры стрелок в соответствии с выпавшим уравнением
+		//СЂР°Р·РјРµСЂС‹ СЃС‚СЂРµР»РѕРє РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ РІС‹РїР°РІС€РёРј СѓСЂР°РІРЅРµРЅРёРµРј
 		var size1 = {w: 39*a,h: 15*a};
 		var size2 = {w: 39*b,h: 15*b};
 		canvas1.width = size1.w;
@@ -52,7 +52,7 @@ $(document).ready(
 		canvas2.height = size2.h;
 		$("#arrow2").css({left:35+a*39});
 		
-		//рисуем стрелки
+		//СЂРёСЃСѓРµРј СЃС‚СЂРµР»РєРё
 		function drawArrow(ctx, W, H)
 		{
 			ctx.beginPath();
@@ -69,16 +69,16 @@ $(document).ready(
 		drawArrow(ctx1, size1.w-lineW/2, size1.h);
 		drawArrow(ctx2, size2.w-lineW/2, size2.h);
 		
-		//уменьшаем стрелки длЯ анимации
+		//СѓРјРµРЅСЊС€Р°РµРј СЃС‚СЂРµР»РєРё РґР»СЏ Р°РЅРёРјР°С†РёРё
 		$(".arrow canvas").css({width: "18", height: "7"});
 		
-		//текст на странице
+		//С‚РµРєСЃС‚ РЅР° СЃС‚СЂР°РЅРёС†Рµ
 		$("#example").find("span").eq(0).html(a);
 		$("#example").find("span").eq(1).html(b);
 		$("#example input").val('?');
 		$(".arrow input").val('');
 		
-		//анимациЯ первой стрелки
+		//Р°РЅРёРјР°С†РёСЏ РїРµСЂРІРѕР№ СЃС‚СЂРµР»РєРё
 		$("#arrow1").fadeIn("fast");
 		$("#canvas1").animate({width: size1.w, height: size1.h}, 1000);
 		
@@ -128,8 +128,6 @@ $(document).ready(
 				$(this).addClass('redtext');
 			}
 		});
-		
-		//$("#canvas2").animate({width: size2.w, height: size2.h}, 2000);
 		
 		
 	}
