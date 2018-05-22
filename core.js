@@ -1,31 +1,3 @@
-﻿function var_dump(obj)
-{
-	var s = '<h1>' + obj + '</h1>';
-	s += '<ol>';
-
-	for (p in obj)
-		s += '<li><b>' + p + '</b> : ' + obj[p] + '</li>';
-	
-	s += '</ol>';
-	window.document.body.innerHTML = s;
-}
-
-function rounder(a)
-{
-	var b = Math.round(parseFloat(a) * 10)/10;
-	return b;
-}
-
-function maxIndex(array)
-{
-	var max = Math.max.apply(Math, array);
-	return array.indexOf(max);
-}
-
-//
-// Точка входа.
-//
-
 $(document).ready(
 	function()
 	{
